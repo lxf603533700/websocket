@@ -162,7 +162,7 @@ class Server{
 			for($i = 0; $i < strlen($cdata); $i++){
 				$decode{$i} = $cdata{$i} ^ $maskkey[$i % 4];
 			}
-			$decode = join('', $decode);
+			//$decode = join('', $decode);
 			$decode = json_decode($decode, true);
 		}
 		return array($opcode, $ismask, $decode);
